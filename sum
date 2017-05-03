@@ -1,0 +1,41 @@
+//使用for循环
+  var arr = [1,2,3,4,5,6,7,8,9];
+  var forsum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    forsum += arr[i];
+  };
+   console.log(forsum);                 //45
+
+  //使用reduce方法
+  var redsum = function(previousResult,item,index,array) {
+    return previousResult+item
+  };
+  console.log(arr.reduce(redsum,0));    //45
+
+  //使用forEach方法
+  var arr = [1,2,3,4,5,6,7,8,9];
+  var sum = 0;
+  var forEachsum = function(item) {
+    sum += item;
+  }
+  arr.forEach(forEachsum);
+  console.log(sum);                     //45
+
+  //使用map方法
+  var arr = [1,2,3,4,5,6,7,8,9];
+  var sum = 0;
+  var forEachsum = function(item) {
+    sum += item;
+  }
+  arr.map(forEachsum);
+  console.log(sum);                     //45  
+  
+  //使用while循环方法
+  var arr = [1,2,3,4,5,6,7,8,9];
+  var sum = 0;
+  var i = 0;
+  while(i<arr.length) {
+    sum += arr[i];
+    ++i;
+  }
+  console.log(sum);                     //45
